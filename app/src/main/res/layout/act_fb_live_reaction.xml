@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rx.fblive.app.MainActivity">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/emoticons_view">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/emoticon_background" />
+        
+        <com.rx.fblive.app.EmoticonsView
+            android:id="@+id/emoticonsView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/emoticons_view_height"
+            android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/emoticons_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLikeEmoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:src="@drawable/like_48" />
+
+        <ImageView
+            android:id="@+id/ivLoveEmoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:src="@drawable/love_48" />
+
+        <ImageView
+            android:id="@+id/ivHahaEmoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/haha_48" />
+
+        <ImageView
+            android:id="@+id/ivWowEmoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:src="@drawable/wow_48" />
+
+        <ImageView
+            android:id="@+id/ivSadEmoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:src="@drawable/sad_48" />
+
+        <ImageView
+            android:id="@+id/ivAngryEmoticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:src="@drawable/angry_48" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
